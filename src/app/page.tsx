@@ -1,95 +1,64 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
-export default function Home() {
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./page.module.css";
+import LogoJunkard from "../../public/images/junkyard-icon.png";
+export default function InitialPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <header className={styles.header}>
+        <div className={styles.container1}>
+          <Image
+            src={LogoJunkard}
+            alt="Logo da plataforma"
+            width={60}
+            height={60}
+          />
+          <p>Junkyard</p>
         </div>
-      </div>
-
-      <div className={styles.center}>
+        <div className={styles.container2}>
+          <h2>Use nosso app gratuitamente</h2>
+          <div className={styles.verticalbar}></div>
+          <Link href="">Fazer login</Link>
+        </div>
+      </header>
+      <main className={styles.main}>
+        <p>
+          <span>Seja bem-vindo(a) ao Junkard.</span>
+          <br />
+          O espaço onde você<br/>
+          pode montar e editar seu treino e dieta
+          <br />
+          com facilidade e rapidez.
+        </p>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <p>Nossa motivação é ajudar a propagar um estilo de vida saudável.</p>
+          </div>
+          <div className={styles.card}>
+            <p>Nosso app possui uma UX intuitiva que possibilita que qualquer pessoa o utilize.</p>
+          </div>
+          <div className={styles.card}>
+            <p>Nosso app está em constante evolução...</p>
+          </div>
+        </div>
+      </main>
+      <footer className={styles.footer}>
+        <div className={styles.logo}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            src={LogoJunkard}
+            alt="Logo da plataforma"
+            width={60}
+            height={60}
+          />
+          <p>Junkyard</p>
+        </div>
+        <div className={styles.midiasocial}>
+          <Link href="">Insta</Link>
+          <Link href="">Email</Link>
+          <Link href="">YouTube</Link>
+        </div>
+      <p>© 2023 Junkyard. Todos os direitos reservados</p>
+      </footer>
+    </>
+  );
 }
