@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import LogoJunkard from "../../public/images/junkyard-icon.png";
+import { RiYoutubeLine, RiInstagramLine, RiMailSendLine } from "react-icons/ri";
+import IconDumbbells from "../../public/images/icon-dumbbells-exercise.png";
+import IconPlanFitness from "../../public/images/icon-fitness-plan.png";
+import IconDiet from "../../public/images/icon-fruits.png";
 export default function InitialPage() {
   return (
     <>
@@ -22,29 +26,38 @@ export default function InitialPage() {
         </div>
       </header>
       <main className={styles.main}>
-        <p>
-          <span>Seja bem-vindo(a) ao Junkard.</span>
-          <br />
-          O espaço onde você<br/>
-          pode montar e editar seu treino e dieta
-          <br />
-          com facilidade e rapidez.
-        </p>
+        <h1>Seja bem-vindo(a) ao Junkyard.</h1>
+        <h2>
+          O espaço onde você pode montar e editar <br />
+          seu treino e dieta com facilidade e rapidez.
+        </h2>
+        <div className={styles.images}>
+          <Image src={IconDumbbells} alt="Icon" width={100} height={100} />
+          <Image src={IconPlanFitness} alt="Icon" width={100} height={100} />
+          <Image src={IconDiet} alt="Icon" width={100} height={100} />
+        </div>
+
         <div className={styles.cards}>
           <div className={styles.card}>
-            <p>Nossa motivação é ajudar a propagar um estilo de vida saudável.</p>
+            <p>
+              Nossa motivação é ajudar a propagar um estilo de vida saudável.
+            </p>
           </div>
           <div className={styles.card}>
-            <p>Nosso app possui uma UX intuitiva que possibilita que qualquer pessoa o utilize.</p>
+            <p>
+              Nosso app possui uma UX intuitiva que possibilita que qualquer
+              pessoa o utilize.
+            </p>
           </div>
           <div className={styles.card}>
             <p>Nosso app está em constante evolução...</p>
           </div>
         </div>
+        <Link href="">Experimente agora!</Link>
       </main>
       <footer className={styles.footer}>
         <div className={styles.logo}>
-        <Image
+          <Image
             src={LogoJunkard}
             alt="Logo da plataforma"
             width={60}
@@ -53,11 +66,17 @@ export default function InitialPage() {
           <p>Junkyard</p>
         </div>
         <div className={styles.midiasocial}>
-          <Link href="">Insta</Link>
-          <Link href="">Email</Link>
-          <Link href="">YouTube</Link>
+          <Link href="">
+            <RiInstagramLine size={30} />
+          </Link>
+          <Link href="">
+            <RiMailSendLine size={30} />
+          </Link>
+          <Link href="">
+            <RiYoutubeLine size={30} />
+          </Link>
         </div>
-      <p>© 2023 Junkyard. Todos os direitos reservados</p>
+        <p>© 2023 Junkyard. Todos os direitos reservados</p>
       </footer>
     </>
   );
