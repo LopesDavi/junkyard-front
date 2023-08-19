@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
-import LogoJunkard from "../../public/images/junkyard-icon.png";
+import LogoJunkyardBlackBgRemove from "../../public/images/junkyard-icon-black-bg-remove.png";
+import LogoJunkyardRedBgRemove from "../../public/images/junkyard-icon-red-bg-remove.png";
 import { RiYoutubeLine, RiInstagramLine, RiMailSendLine } from "react-icons/ri";
 import IconDumbbells from "../../public/images/icon-dumbbells-exercise.png";
 import IconPlanFitness from "../../public/images/icon-fitness-plan.png";
@@ -12,7 +13,7 @@ export default function InitialPage() {
       <header className={styles.header}>
         <div className={styles.container1}>
           <Image
-            src={LogoJunkard}
+            src={LogoJunkyardBlackBgRemove}
             alt="Logo da plataforma"
             width={60}
             height={60}
@@ -58,7 +59,7 @@ export default function InitialPage() {
       <footer className={styles.footer}>
         <div className={styles.logo}>
           <Image
-            src={LogoJunkard}
+            src={LogoJunkyardRedBgRemove}
             alt="Logo da plataforma"
             width={60}
             height={60}

@@ -12,10 +12,8 @@ body {
   justify-content: center;
   flex-direction: column;
 
+  width: auto;
   margin: 40px auto;
 
   background-color: black;
-
-  width: auto;
-  }
-
+}
